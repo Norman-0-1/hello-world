@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int zero_count = 0;
+    int below_zero = 0;
+    int arr[15];
+    {
+
+        for (int i = 0; i < 15; i++) {
+            cout << "[" << i + 1 << "]" << ": ";
+            cin >> arr[i];
+        }
+
+        cout << "\n Massiv: ";
+
+        for (int i = 0; i < 15; ++i) {
+            cout << arr[i] << " ";
+        }
+
+        for (int i = 0; i < 15; i++)
+        {
+            if (arr[i] == 0) zero_count++;;
+        }
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (arr[i] < 0) below_zero++;
+        }
+
+        cout << "Chislo otricatelnih chlenov: " << below_zero
+            << " Chislo nulevih chlenov: " << zero_count << endl;
+    }
+    system("pause");
+    return 0;
+}          
